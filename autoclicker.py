@@ -1,4 +1,3 @@
-
 import pyautogui
 import keyboard
 import time
@@ -16,10 +15,12 @@ def click_button(image_path, confidence=0.8):
 # Specify the path to your image
 button_image = 'slow_download.png'
 
-# Run the function
-while not keyboard.is_pressed('esc'):
+# Run the function in a loop until Esc key is pressed
+while True:
+    if keyboard.is_pressed('esc'):
+        print("Esc key pressed. Exiting.")
+        break
     found = click_button(button_image)
     if found:
         print("Button clicked!")
-        break
     time.sleep(0.5)  # Wait before trying again
