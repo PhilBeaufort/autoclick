@@ -1,7 +1,8 @@
 
 import pyautogui
-import time
 import keyboard
+import time
+import cv2
 
 def click_button(image_path, confidence=0.8):
     # Locate the button on the screen
