@@ -4,13 +4,17 @@ import time
 import cv2
 
 def click_button(image_path, confidence=0.8):
-    # Locate the button on the screen
-    button_location = pyautogui.locateCenterOnScreen(image_path, confidence=confidence)
-    if button_location:
-        # Click the button
-        pyautogui.click(button_location)
-        return True
-    return False
+    try:
+        # Locate the button on the screen
+        button_location = pyautogui.locateCenterOnScreen(image_path, confidence=confidence)
+        if button_location:
+            # Click the button
+            pyautogui.click(button_location)
+            return True
+        else:
+            return False
+    except Exception as e:
+        return False
 
 # Specify the path to your image
 button_image = 'slow_download.png'
@@ -23,4 +27,4 @@ while True:
     found = click_button(button_image)
     if found:
         print("Button clicked!")
-    time.sleep(0.5)  # Wait before trying again
+    time.sleep(2)  # Wait before trying again
