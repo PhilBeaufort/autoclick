@@ -1,12 +1,18 @@
-## Développement local
+# Autoclicker
 
-1. Installer Python v3.10 minimalement
-1. Créer un environnement avec vscode : `F1 > Python: Create Environnement... > .venv`
-1. Installer les dépendances : `pip install -r requirements.txt`
-2. Exécution sur vscode : `Python: Run` "Run and Debug"
-3. Exécution : `python autoclicker.py`
+This script was made to find and click on the download button when downloading mods with Wabbajack and Free Nexus.
 
-### Si vous ajoutez une dépendance
+If you want to change the use case, you can just change the image of the button to click.
 
-1. `pip install "votre dépendance"`
-1. Exécution de la commande : `pip freeze > requirements.txt` pour ajouter des dépendances dans l'environnement
+## Local dev
+
+1. Install Python v3.10 minimally
+1. Create python env with vscode : `F1 > Python: Create Environnement... > .venv`
+1. Install dependancies : `pip install -r requirements.txt`
+1. run with vscode : `Python: Run` "Run and Debug"
+1. run with cmd : `python script.py`
+
+### Add dependencies
+
+1. `pip install "dependency"`
+1. Execute command : `pip freeze > requirements.txt` to add required dependencies in requirements.txt

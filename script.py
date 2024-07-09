@@ -1,4 +1,3 @@
-from pynput.mouse import Button, Controller
 import pyautogui
 import keyboard
 import time
@@ -9,9 +8,12 @@ def click_button(image_path, confidence=0.8):
         # Locate the button on the screen
         button_location = pyautogui.locateCenterOnScreen(image_path, confidence=confidence)
         if button_location:
-            # Click the button
-            secondary_mouse.position = button_location
-            secondary_mouse.click(Button.left, 1)
+            # Save the current position of the primary mouse
+            current_position = pyautogui.position()
+            # Move to the button location and click
+            pyautogui.click(button_location)
+            # Move the primary mouse back to its original position
+            pyautogui.moveTo(current_position)
             return True
         else:
             return False
@@ -20,9 +22,6 @@ def click_button(image_path, confidence=0.8):
 
 # Specify the path to your image
 button_image = 'slow_download.png'
-
-# Create a secondary mouse controller
-secondary_mouse = Controller()
 
 # Run the function in a loop until Esc key is pressed
 while True:
