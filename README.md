@@ -11,6 +11,7 @@ If you want to change the use case, you can just change the image of the button 
 1. Install dependancies : `pip install -r requirements.txt`
 1. run with vscode : `Python: Run` "Run and Debug"
 1. run with cmd : `python script.py`
+1. Press the `Esc` key to exit the script.
 
 ### Add dependencies
 
