@@ -27,4 +27,4 @@ while True:
     found = click_button(button_image)
     if found:
         print("Button clicked!")
-    time.sleep(2)  # Wait before trying again
+    time.sleep(0.5)  # Wait before trying again
