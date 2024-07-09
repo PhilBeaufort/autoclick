@@ -1,0 +1,13 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Python: Run",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "autoclicker.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
